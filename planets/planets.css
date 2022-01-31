@@ -1,0 +1,325 @@
+#lemon{
+  height: auto;
+  width: auto;
+  max-width: 65px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 10%;
+  top: 45%;
+  z-index: -4;
+}
+  
+#lemon_layer{
+  height: auto;
+  width: auto;
+  max-width: 80px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 9.25%;
+  top: 44%;
+  z-index: -5;
+  filter: brightness(0.5);
+  
+  display: none;
+}
+  
+#track{
+  height: auto;
+  width: auto;
+  max-width: 50px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 35%;
+  top: 16%;
+  z-index: -4;
+}
+  
+#track_layer{
+  height: auto;
+  width: auto;
+  max-width: 65px;
+  max-height: auto;
+ 
+  position: fixed;
+  left: 34.5%;
+  top: 15%;
+  z-index: -5;
+  filter: brightness(0.5);
+  
+  display: none;
+}
+
+#shape{
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 78%;
+  top: 24%;
+  z-index: -4;
+}
+  
+#shape_layer{
+  height: auto;
+  width: auto;
+  max-width: 120px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 77%;
+  top: 23%;
+  z-index: -5;
+  filter: brightness(0.5);
+  
+  display: none;
+}
+
+#cal{
+  height: auto;
+  width: auto;
+  max-width: 80px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 53%;
+  top: 34%;
+  z-index: -4;
+}
+  
+#cal_layer{
+  height: auto;
+  width: auto;
+  max-width: 95px;
+  max-height: auto;
+  
+  position: fixed;
+  left: 52.5%;
+  top: 32.5%;
+  z-index: -5;
+  filter: brightness(0.5);
+  
+  display: none;
+}
+
+.view-projects{
+  position: fixed;
+  left: 5px;
+    
+  width: 55%;
+  height: 90%;
+  
+  background-color: #7eaddade;
+  border: 2px solid rgb(0, 0, 0);
+
+  display: none;
+
+  z-index: -2;
+}
+
+#close-view{
+  position: fixed;
+  padding-bottom: 5%;
+  top: auto !important;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+
+#close-view:hover{
+  color: rgb(36, 82, 36);
+}
+
+#close-view:active{
+  color: yellow;
+  transform: translateY(3px); 
+}
+
+.lemon_farm{
+  position: relative;
+  display: none;
+  height: 90%;
+  top: 5%;
+  overflow-y: scroll;
+  text-align: center;
+  color: rgb(255, 255, 0);
+  text-shadow: 3px 3px 5px darkslategrey;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+#lemon_vid{
+  position: relative;
+  width: 90%;
+  height: fit-content;
+}
+
+#text-box > p, ul, ol{
+  text-align: left;
+  text-shadow: none;
+  color: darkslategrey;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+#text-box{
+  position: relative;
+  top: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+.popup-overlay.active, .popup-overlay1.active, .popup-overlay2.active, .popup-overlay3.active, .popup-overlay4.active, .popup-overlay5.active{
+  position: fixed;
+  background-color: black;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#image.active, #image1.active, #image2.active, #image3.active, #image4.active, #image5.active{
+  top: -12%;
+  max-width: 85%;
+  max-height: auto;
+}
+#image.active:hover, #image1.active:hover, #image2.active:hover, #image3.active:hover, #image4.active:hover, #image5.active:hover{
+  opacity: 1;
+}
+
+#close-popup, #close-popup1, #close-popup2, #close-popup3, #close-popup4, #close-popup5{
+  display: none;
+  left: 1%;
+  top: 1%;
+  font-size: large;
+  font-weight: bolder;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+#close-popup:hover, #close-popup1:hover, #close-popup2:hover, #close-popup3:hover, #close-popup4:hover, #close-popup5:hover{
+  color: rgb(36, 82, 36);
+}
+
+#close-popup:active, #close-popup1:active, #close-popup2:active, #close-popup3:active, #close-popup4:active, #close-popup5:active{
+  color: yellow;
+  transform: translateY(3px); 
+}
+
+.covid_tracker{
+  position: relative;
+  display: none;
+  height: 90%;
+  top: 5%;
+  overflow-y: scroll;
+  text-align: center;
+  color: rgb(159, 255, 155);
+  text-shadow: 3px 3px 5px rgb(28, 61, 27);
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+#image, #image1, #image2, #image3, #image4, #image5{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  padding-top: 7%;
+  height: auto;
+}
+
+#image:hover, #image1:hover, #image2:hover, #image3:hover, #image4:hover, #image5:hover{
+  opacity: 0.7;
+}
+
+.Calendar{
+  position: relative;
+  display: none;
+  height: 90%;
+  top: 5%;
+  overflow-y: scroll;
+  text-align: center;
+  color: rgb(150, 25, 25);
+  text-shadow: 2px 1px 2px white;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+#cal-img{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding-top: 3%;
+  height: auto;
+}
+
+#iteration{
+  text-shadow: 2px 1px rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.shape_tracker{
+  position: relative;
+  display: none;
+  height: 90%;
+  top: 5%;
+  overflow-y: scroll;
+  text-align: center;
+  color: rgb(237, 209, 253);
+  text-shadow: 3px 3px 5px rgb(18, 38, 41);
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 480px) {
+  .view-projects{
+    width: 95%;
+    height: 93%;
+  }
+
+  #text-box > p, ul, ol{
+    font-size: small;
+  }
+
+  #lemon{
+    max-width: 45px;
+  }
+  #lemon_layer{
+    max-width: 55px;
+    left: 8.25%;
+  }
+
+  #track{
+    max-width: 35px;
+  }
+  #track_layer{
+    max-width: 45px;
+    left: 33.5%;
+  }
+
+  #cal{
+    max-width: 50px;
+  }
+  #cal_layer{
+    max-width: 60px;
+    left: 51.5%;
+  }
+
+  #shape{
+    max-width: 55px;
+    top: 25%;
+  }
+  #shape_layer{
+    max-width: 65px;
+    left: 76.5%;
+    top: 24%;
+  }
+}

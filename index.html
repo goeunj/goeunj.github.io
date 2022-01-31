@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namoo</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./contact/contact.css">
+    <link rel="stylesheet" href="./planets/planets.css">
+    <link rel="stylesheet" href="./chatbot/chatbot.css">
+    <link rel="stylesheet" media="all" href="./chat-bubble-master/component/styles/setup.css">
+	<link rel="stylesheet" media="all" href="./chat-bubble-master/component/styles/says.css">
+	<link rel="stylesheet" media="all" href="./chat-bubble-master/component/styles/reply.css">
+	<link rel="stylesheet" media="all" href="./chat-bubble-master/component/styles/typing.css">
+	<link rel="stylesheet" media="all" href="./chat-bubble-master/component/styles/input.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="./contact/contact.js"></script>
+    <script src="./planets/planets.js"></script>
+    <script src="./chatbot/chatbot.js"></script>
+    <script src="./chat-bubble-master/component/Bubbles.js"></script>
+</head>
+<body>
+    <!-- hint/how-to-navigate screen -->
+    <section class="hint-screen">
+        <p id="navigation">Click the left/right levers to navigate the planets.</p>
+        <p id="enter-button">Click the push button beside the right lever to view each planet.</p>
+        <p id="chatbot-button">Click to talk to commander Goeun</p>
+        <p id="hint-button">Click to view this page again</p>
+        <button id="close-hint">X CLOSE</button>
+    </section>   
+
+    <!-- warn user about commander letter -->
+    <section class="warning-popup">
+        <h1 id="warning">**WARNING**</h1>
+        <p>
+            You have visited a couple of planets.
+            <br>Commander Goeun has sent a letter. 
+            <br>Click 'ROGER THAT' to proceed to the letter. 
+        </p>
+        <button id="close-btn">ROGER THAT</button>
+    </section>
+    
+    <!-- chatbot -->
+    <section class="commander">
+        <img id="flag" onclick="chatbot()" src="./images/commander.png">
+        <p><section id="flag_text">TALK TO COMMANDER GOEUN</section></p>
+
+        <section class="chatbot">
+            <button onclick="closeChat()" id="close-chatbot">X</button>
+            <div id="chat"></div>
+        </section>
+    </section>
+    
+    <main>
+        <section class="maneuver">
+            <a><button id="hintbtn">&quest;</button></a>
+            <a onclick="pushBtn()"><img id="pushbtn" src="./images/push.png"></a>
+            <a onclick="leftBtn()"><img id="leftbtn" src="./images/left.png"></a>
+            <a onclick="rightBtn()"><img id="rightbtn" src="./images/right.png"></a>
+        </section>
+
+        <!-- planets -->
+        <section class="projects">
+            <section id="lemonFarm">
+                <a onclick="" ><img id="lemon" src="./images/lemon.png"></a>
+                <img id="lemon_layer" src="./images/lemon.png">
+            </section>
+
+            <section id="covidTracker">
+                <a onclick="" ><img id="track" src="./images/tracker.png"></a>
+                <img id = "track_layer" src="./images/tracker.png">
+            </section>
+
+            <section id="shapeTracker">
+                <a onclick="" ><img id="shape" src="./images/shape.png"></a>
+                <img id="shape_layer" src="./images/shape.png">
+            </section>
+
+            <section id="calendar">
+                <a onclick="" ><img id="cal" src="./images/calendar.png"></a>
+                <img id="cal_layer" src="./images/calendar.png">
+            </section>
+        </section>
+
+        <!-- project description form -->
+        <section class="view-projects">
+            <button id="close-view">X</button>
+            <section class="lemon_farm">
+                <h4>LEMON FARM</h4>
+                <video id="lemon_vid" controls>
+                    <source src="./videos/lemonFarm.mp4" type="video/mp4">
+                </video>
+                <section id="text-box">
+                    <p>
+                        This was an individual project done in an 'Introduction to Software Engineering' course.
+                        Android Studio along with Java was used to create a custom themed mine sweeper game. 100% of 
+                        the application theme, frontend development and backend programming was done in the span of 
+                        two weeks.<br><br>
+                        Additional features including background music, button sound effects and animation were 
+                        added for a more immersive gameplay.<br><br>
+                        You can take a further look at the following link: <a href="https://github.com/goeunj/Lemon-Farm">github.com/Lemon-Farm</a> 
+                    </p>
+                </section>
+            </section>
+
+            <section class="covid_tracker">
+                <h4>COVID-19 TRACKER</h4>
+                <section id="text-box">
+                    <p>
+                        This Covid-19 tracker was an individual project done in a 'Client Side Development' course. 
+                        Angular, leaflet map API and an instructor-provided storage server was used to create a fully functional 
+                        web application to keep track of the number of Covid-19 cases in all locations on the map.<br><br>
+                        In order to report a new Covid-19 case, the user must select a place. If the place is not on the 
+                        list, the user may add a new place.
+                    </p>
+                </section>
+                <section class="popup-overlay">
+                    <button id="close-popup">X</button>
+                    <img id="image" src="images/covid_add_new_place.png">
+                </section>
+    
+                <section id="text-box">
+                    <p>
+                        Once the specific place is added, it will show up in the list of places. After selecting the place, 
+                        a form asking for the individual's information is shown.
+                    </p>
+                </section>
+                <section class="popup-overlay1">
+                    <button id="close-popup1">X</button>
+                    <img id="image1" src="images/covid_select_place.png">
+                </section>
+                <section class="popup-overlay2">
+                    <button id="close-popup2">X</button>
+                    <img id="image2" src="images/covid_report_new_case.png">
+                </section>
+            
+                <section id="text-box">
+                    <p>
+                        After filling the information out, the user can then submit the new report. The new report will 
+                        show up on the list of cases below.
+                    </p>
+                </section>
+                <section class="popup-overlay3">
+                    <button id="close-popup3">X</button>
+                    <img id="image3" src="images/covid_submit_new_case.png">
+                </section>
+                <section class="popup-overlay4">
+                    <button id="close-popup4">X</button>
+                    <img id="image4" src="images/covid_new_case_added.png">
+                </section>
+
+                <section id="text-box">
+                    <p> 
+                        To view the information of the individual who has Covid-19, the 'More Info' button may be clicked to 
+                        retrieve their information. To remove a case from the list, the user may click the 'Remove' Button.
+                    </p>
+                </section>
+                <section class="popup-overlay5">
+                    <button id="close-popup5">X</button>
+                    <img id="image5" src="images/covid_new_case_info.png">
+                </section>
+            </section>
+
+            <section class="Calendar">
+                <h4>CALENDAR DESIGN</h4>
+                <section id="text-box">
+                    <p>
+                        This was a project from a UI design course. In a group of 5, we took a look at the SFU Canvas calendar 
+                        to create changes that would create a more inclusive and efficient calendar layout.<br>
+                        To do so, we had 3 iterations.
+                    </p>
+
+                    <ol>
+                        <li>Come up with the Good vs Bad design</li>
+                        <li>
+                            Choose 3 functional and non-functional requirements we want to add to the interface
+                            <ul>
+                                <li>Create a low fidelity prototype in Balsamiq</li>
+                                <li>Create a medium fidelity prototype in Figma</li>
+                            </ul>
+                        </li>
+                        <li>Gather user experience reviews</li>
+                    </ol>
+
+                    <p>
+                        We will take a look at each iteration below.
+                    </p>
+                </section>
+                <br>
+                <p id="iteration">Iteration 1</p>
+                <section id="text-box">
+                    <p>Good Design</p>
+                    <ul>
+                        <li>Overall design is very clear and simple</li>
+                        <li>A confirmation pop-up appears when deleting an event for error prevention</li>
+                    </ul>
+
+                    <p>Bad Design</p>
+                    <ul>
+                        <li>Lack of indication on how to hide specific courses</li>
+                        <li>User is unable to add a new calendar</li>
+                        <li>Lack of flexibility in choosing specific months</li>
+                    </ul>
+                </section>
+                <br>
+                <p id="iteration">Iteration 2</p>
+                <section id="text-box">
+                    <p>3 Functional Requirements</p>
+                    <ul>
+                        <li>Make choosing months more efficient</li>
+                        <li>Showing/hiding a calendar should be more apparent to the user; User should have an easier way to choose calendar colour</li>
+                        <li>User should be able to add their own calendar and add events to that calendar</li>
+                    </ul>
+
+                    <p>3 Non-Functional Requirements</p>
+                    <ul>
+                        <li>User should not be able to add events to calendars they do not own (i.e., only instructors have access to adding/deleting/changing events on course calendar)</li>
+                        <li>User should be able to use keyboard shortcuts to navigate the interface</li>
+                        <li>Have an option to read aloud calendar elements for visually impaired users</li>
+                    </ul>
+
+                    <p>Low Fidelity Prototype</p>
+                    <ul>
+                        <li>Clicking on the month/year button in the top-left corner of the screen allows the user to 
+                            quickly navigate to a different month for a given year</li>
+                        <li>With the addition of a square icon next to a course (or calendar name), the user  
+                        can easily hide or show the calendar events.</li>
+                        <li>The square "plus" icon next to the "Calendars" heading in the side panel allows the user to 
+                        create a new calendar group, with a selected color.</li>
+                    </ul>
+                </section>
+
+                <img id="cal-img" src="images/lfp.png">
+                <img id="cal-img" src="images/lfp_3.png">
+
+                <section id="text-box">
+                    <p>Medium Fidelity Prototype</p>
+                    <p>Original View</p>
+                </section>
+
+                <img id="cal-img" src="images/mfp_1.jpg">
+
+                <section id="text-box">
+                    <p>The following keyboard shortcuts are supported:</p>
+                    <ul>
+                        <li>Press "j" or "n" to go to the next month</li>
+                        <li>Press "2" or "w" to go to week view</li>
+                        <li>Press "3" or "m" to go to month view</li>
+                        <li>Press "c" to create a new calendar</li>
+                        <li>Press "e" to see event details</li>
+                    </ul>
+                    <p>Below is an example of what pressing "2" or "w" would look like</p>
+                </section>
+
+                <img id="cal-img" src="images/mfp_6.jpg">
+
+                <section id="text-box">
+                    <p>To add a new calendar, user simply has to click the square "plus" icon next to teh "Calendars" heading 
+                        in the side panel.
+                    </p>
+                </section>
+
+                <img id="cal-img" src="images/mfp_3.jpg">
+                <img id="cal-img" src="images/mfp_4.jpg">
+                <img id="cal-img" src="images/mfp_5.jpg">
+                <br>
+                <p id="iteration">Iteration 3</p>
+                <section id="text-box">
+                    <p>
+                        We held a cognitive walkthrough of our medium fidelity prototype and gave our user the following scenario:<br>
+                        <br>
+                        "You are a 1st year student attending SFU. You have chosen your classes and have signed up for a club. Looking at 
+                        your calendar, you notice that the club is not showing up because it is not an official course at SFU. So, you 
+                        decide to add a new calendar to represent the club."
+                        <br><br>
+                        We then gave the user 5 actions to complete without telling them the exact buttons to click.
+                    </p>    
+                    <ol>
+                        <li>Get "Add New Calendar" pop-up to display</li>
+                        <li>Cancel adding a new calendar</li>
+                        <li>Submit new calendar</li>
+                        <li>Hide/show one of current calendars</li>
+                        <li>Select January as the current month</li>
+                    </ol>
+
+                    <p>
+                        Overall, the user had no difficulties carrying out each task. Our prototype had very 
+                        apparent and well placed functionalities. We also used icons that people are familiar with.
+                        However, the user did take some time figuring out that the month/year had a drop down menu. If we 
+                        had another iterations down the line, we would take these results and make efficient changes. 
+                    </p>
+                
+                </section>
+            </section>
+
+            <section class="shape_tracker">
+                <h4>SHAPE TRACKER</h4>
+                <section id="text-box">
+                    <p>
+                        In a group of 3, we wanted to train and test 4 machine learning models for shape detection. 
+                        <br><br>
+                        TOOLS:
+                        <br><br>
+                        We gathered linear acceleration data and gravitational force data using the Physics 
+                        Toolbox Sensor Suite app. The linear acceleration data allows us to record the change of direction 
+                        and the g-force data produces cleaner images that we can visually see when the data is graphed.
+                        <br><br><br>
+                        SAMPLES:
+                        <br><br>
+                        We had participants physically move their phone to draw the predetermined shapes (O, S, V). Each 
+                        participant went through the following steps:
+                        <ol>
+                            <li>
+                                Hold the phone flat, phone screen facing up
+                            </li>
+                            <li>
+                                Each shape should be drawn within a 15x10in canvas (LxW)
+                            </li>
+                            <li>
+                                Move phone at constant speed; Finish each shape under 5 seconds
+                            </li>
+                        </ol>
+                        <p>For each shape, we had the following rules:</p>
+                        <ul>
+                            <li>Start at the top left when drawing V</li>
+                            <li>Start at the top center and move clockwise when drawing O</li>
+                            <li>Start at top right when drawing S</li>
+                        </ul>
+                        <p>Each participant used their dominant hand and non-dominant hand to draw all 3 shapes multiple times for variations.
+
+                        <br>
+                        The gathered data was cleaned by calculating the optimal standard deviations from the peaks and valleys of each shape.
+                        <br><br><br>
+
+                        4 MODELS:
+                        </p>
+                        <ol>
+                            <li>
+                                Gaussian (Naïve Bayes) Classifier: We were not too interested in this model because it was not performing as well as 
+                                the other 3 models. Hence, we did not tune the function for optimal results.
+                            </li><br>
+                            <li>
+                                K-Neighbors Classifier: This classifier had an accuracy score of 0.78. With n values less than 7, 
+                                the accuracy score decreased, and was at its best when we set n to 10. 
+                            </li><br>
+                            <li>
+                                Neural Network Classifier: This classifier had an accuracy score of 0.84. With hidden units greater than 6, 
+                                it performed significantly worse. With smaller alpha values, the accuracy increased. After some playing around 
+                                with the parameters, we found that this classifier worked best with 1 hidden layer, 6 hidden units and 1e-3 alpha value.
+                            </li><br>
+                            <li>
+                                Random Forest Classifier: This had an accuracy score of 0.94. Both the criterion Gini and Entropy resulted in high accuracy scores. 
+                                However, entropy was chosen because the scores remained steady. Gini produced great results, but had some fluctuations in the scores and 
+                                was not as consistent.
+                            </li>
+                        </ol>
+
+                        <p>Overall, we found the Random Forest Classifier to be the optimal model for shape detection.
+                        <br><br><br>
+                        LIMITATIONS & EXTENSIONS:
+                        </p>
+                    
+                        <ul>
+                            <li>Collect more data points</li>
+                            <li>Participants had various ways of holding their phone (i.e., how much their phone was tilting upward/downward)</li>
+                            <li>A template of each shape to draw would have made the procedure easier for the participants</li>
+                        </ul>
+
+                        <p>
+                        Above are some limitations we experienced. Making everyone hold their phones the exact same way and making 
+                        everyone draw each shape the exact same way would definitely increase the accuracy of each model, when 
+                        classifying each shape into their categories. However, it would reduce the "real-world" variance 
+                        the model would be trained on. So, there definitely exists a trade-off, but with our project, we were aiming to 
+                        determine the best model a developer could use to classify each shape to later create an application. This application 
+                        could allow the user to draw a shape that would then trigger another application or function. For instance, drawing the "V" shape 
+                        could dial "MOM". 
+                        <br><br>
+                        You can take a further look at the following link: <a href="https://github.com/goeunj/shape-detector">github.com/Shape-Detector</a> 
+                        </p>
+                    </p>
+                </section>
+            </section>
+        </section>
+
+        <!-- contact information -->
+        <section class="contact">
+            <img id="contact_info" src="images/contacts.png">
+            <img id="stamp" src="images/stamp.png">
+            <address class="info">
+                <button id="close_info">X</button><br>
+                <p id="about">Hello! My name is Goeun Jang, currently a 4th year
+                    computer science major and cognitive science minor
+                    at Simon Fraser University. Hopefully, you had a fun time
+                    exploring some of my projects in an interactive way. If you
+                    would like to make further connections, below are my contact
+                    information.  
+                </p>
+
+                Email: <a href="mailto:goeunj@sfu.ca">goeunj@sfu.ca</a><br>
+                Phone: <a href="tel:778-378-5105">(778)-378-5105</a><br>
+            </address>
+        </section>
+    </main>
+</body>
+</html>
