@@ -102,10 +102,3 @@
     font-size: small;
   }
 }
-
-@media screen and (max-width: 300px){
-  #stamp{
-    max-width: 40px;
-    left: 11%;
-  }
-}

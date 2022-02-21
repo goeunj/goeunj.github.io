@@ -335,21 +335,3 @@ p{
     font-size: xx-large;
   }
 }
-
-@media screen and (max-width: 300px){
-  #warning{
-    font-size: 20px;
-    text-shadow: 0.15px 0.1px white;
-  }
-
-  .warning-popup > p{
-    text-shadow: none;
-    padding: none;
-    margin-top: 20%;
-  }
-
-  #close-btn{
-    font-size: small;
-    margin-top: 20%;
-  }
-}
