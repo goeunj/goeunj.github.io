@@ -279,7 +279,7 @@
   font-size: x-large;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .view-projects{
     width: 95%;
     height: 93%;

@@ -1,19 +1,6 @@
 .contact{
     display: none;
 }
-  
-#contact_info{
-  position: fixed;
-  height: auto;
-  width: auto;
-  max-width: fit-content;
-  max-height:300px;
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -3;
-}
 
 #stamp{
   position: fixed;
@@ -26,6 +13,19 @@
   left: 5%;
   display: none;
   z-index: -3;
+}
+  
+#contact_info{
+  position: fixed;
+  height: auto;
+  width: auto;
+  max-width: fit-content;
+  max-height:300px;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .info{
@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   #contact_info{
     max-width: 250px;
   }
