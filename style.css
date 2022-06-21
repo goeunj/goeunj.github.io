@@ -1,0 +1,243 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    background-color: #ffffff87;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+}
+
+#banner {
+    background: url(other/banner.jpg) no-repeat center left;
+
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+header {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    color: rgb(24, 54, 32);
+}
+
+.tab {
+    text-align: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tab > #about, #exp, #contact, .drop-down > a {
+    overflow: hidden;
+    border: 2px solid black;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(24, 54, 32);
+    color: #ffffff;
+    font-size: larger;
+    letter-spacing: 3px;;
+
+    position: relative;
+    display: inline-block;
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-down-content{
+    text-align: left;
+    position: absolute;
+    display: none;
+
+    overflow: hidden;
+    border: 2px solid black;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(24, 54, 32);
+}
+
+.drop-down-content > a{
+    overflow: hidden;
+    border: 2px solid #45572fbb;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(24, 54, 32);
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    color: #9ea991;
+    font-size: medium;
+    letter-spacing: 3px;
+}
+
+.drop-down-content > a:hover {
+    color: white;
+}
+
+.drop-down:hover .drop-down-content {
+    display: block;
+}
+
+#ABOUT, #PROJECTS, #EXPERIENCES, #CONTACT {
+    margin-left: 8%;
+    margin-right: 8%;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace
+}
+
+#ABOUT > h2 {
+    color: rgb(24, 54, 32);
+    letter-spacing: 7px;
+    text-align: center;
+    font-weight: 550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#ABOUT > p {
+    color: black;
+}
+
+#ABOUT > p > a {
+    color: red;
+}
+
+#ABOUT > p > a:hover {
+    color: rgb(89, 148, 155);
+}
+
+
+#PROJECTS > h2 {
+    color: rgb(24, 54, 32);
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#PROJECTS > h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+
+#PROJECTS > h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: large;
+    font-weight: lighter;
+}
+
+#PROJECTS > ul {
+    list-style-position: inside;
+
+    border: 2px solid #1b46235f;
+    padding: 20px;
+    background-color: #1b46235f;
+    color: black;
+}
+
+#PROJECTS > p > a {
+    color: red;
+}
+
+#PROJECTS > p > a:hover {
+    color: rgb(89, 148, 155);
+}
+
+
+#flag {
+    width: 15%;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.img > img {
+    width: 70%;
+    border: 3px solid #1f2617;
+}
+
+#lemon-vid {
+    width: 80%;
+    height: fit-content;
+    border: 3px solid #1f2617;
+}
+
+.vid {
+    display: flex;
+    justify-content: center;
+}
+
+#EXPERIENCES > h2 {
+    color: rgb(24, 54, 32);
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#EXPERIENCES > h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+
+#EXPERIENCES > ul {
+    border: 2px solid #1b46235f;
+    padding: 20px;
+    background-color: #1b46235f;
+    color: black;
+}
+
+#CONTACT {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 550;
+}
+
+#CONTACT > h2 {
+    color: rgb(24, 54, 32);
+    letter-spacing: 3px;
+    font-weight: 550;
+}
+
+#CONTACT > p > a {
+    color: rgb(141, 2, 141);
+}
+
+#CONTACT > p > a:hover {
+    color: rgb(89, 148, 155);
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 5px;
+    padding-left: 7px;
+}
