@@ -241,3 +241,11 @@ a:active {
     margin-top: 5px;
     padding-left: 7px;
 }
+
+@media only screen and (max-width: 800px) {
+    #banner {
+        background: url(other/banner.jpg) no-repeat center left;
+        padding-top: 110px;
+        padding-bottom: 150px;
+    }
+}
