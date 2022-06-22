@@ -294,10 +294,11 @@ a:active {
     display: none;
 }
 
-@media only screen and (max-device-width: 480px) and (min-device-width: 50px) {
+@media only screen and (max-width: 480px) and (min-width: 0px) {
     body{
         background-color: white;
-        background: url(other/banner.jpg) no-repeat top left;
+        background: url(other/logo.jpg) no-repeat center center;
+        background-size: contain;
     }
 
     #mobile {
