@@ -42,7 +42,7 @@ chatWindow.talk(
       },
 
       name: {
-        says: ["My name!", "Go-eun, where 'eun' sounds similar to the 'en' in seven.", "In Korean it means lovely."],
+        says: ["My name!", "Go-eun, where 'eun' sounds similar to the 'en' in 'seven'.", "In Korean it means lovely."],
         reply: [
           {
             question: "Who are you?",
