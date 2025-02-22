@@ -60,7 +60,7 @@ chatWindow.talk(
       },
       
       mbti: {
-        says:["I: introversion", "S: sensing", "F: feeling", "J: judgment", "A: assertive", "Mainly known for being kind, reliable, hard-working, dependable and trustworthy."],
+        says:["I: introversion", "S: sensing", "F: feeling", "J: judgment", "A: assertive", "Mainly known for being kind, reliable, hard-working, dependable and trustworthy.", "It is my personality from the MBTI test. You can learn more about ISFJ <a href = 'https//www.16personalities.com/isfj-personality'>here</a>."],
         reply:[
           {
             question: "Who are you?",
