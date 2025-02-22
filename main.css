@@ -188,7 +188,7 @@ p{
 #pushbtn{
   height: auto;
   width: auto;
-  max-width: 150px;
+  max-width: 100px;
   max-height: auto;
 
   position: fixed;
@@ -202,7 +202,7 @@ p{
 #leftbtn{
   height: auto;
   width: auto;
-  max-width: 70px;
+  max-width: 60px;
   max-height: auto;
 
   position: fixed;
@@ -216,7 +216,7 @@ p{
 #rightbtn{
   height: auto;
   width: auto;
-  max-width: 70px;
+  max-width: 60px;
   max-height: auto;
 
   position: fixed;
