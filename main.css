@@ -188,12 +188,12 @@ p{
 #pushbtn{
   height: auto;
   width: auto;
-  max-width: 140px;
+  max-width: 100px;
   max-height: auto;
 
   position: fixed;
   left: 75%;
-  top: 80%;
+  top: 82%;
   z-index: -2;
 
   pointer-events: none;
