@@ -193,7 +193,7 @@ p{
 
   position: fixed;
   left: 75%;
-  top: 79%;
+  top: 76%;
   z-index: -2;
 
   pointer-events: none;
@@ -207,7 +207,7 @@ p{
 
   position: fixed;
   left: 33%;
-  top: 77%;
+  top: 75%;
   z-index: -2;
 
   pointer-events: none;
@@ -221,7 +221,7 @@ p{
 
   position: fixed;
   left: 63%;
-  top: 77%;
+  top: 75%;
   z-index: -2;
 
   pointer-events: none;
